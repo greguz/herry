@@ -1,0 +1,37 @@
+{
+  "name": "herry",
+  "version": "0.1.0",
+  "description": "You're a problem, Herry.",
+  "main": "herry.js",
+  "types": "herry.d.ts",
+  "files": [
+    "herry.js",
+    "herry.d.ts"
+  ],
+  "scripts": {
+    "test:eslint": "eslint *.js",
+    "test:ava": "ava",
+    "test": "npm run test:eslint && npm run test:ava"
+  },
+  "keywords": [
+    "error",
+    "code",
+    "message",
+    "info"
+  ],
+  "author": "Giacomo Gregoletto",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^3.8.2",
+    "eslint": "^7.1.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/greguz/herry.git"
+  }
+}
