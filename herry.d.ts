@@ -1,15 +1,9 @@
-class Herry extends Error {
+declare class Herry<T = any> extends Error {
   static defaultCode: string
-  static define (code: String, message?: string): Constructor<DefinedHerry>
+  static define<D = any> (code: String, message?: string): new (info?: D) => Herry<D>
   code: string
-  info: any
+  info: T
   constructor (code?: string, message?: string, info?: any)
 }
-
-class DefinedHerry extends Herry {
-  constructor (info?: any)
-}
-
-type Constructor<T extends Function> = new (...args: ConstructorParameters<T>) => T
 
 export = Herry
