@@ -15,10 +15,24 @@ const err = new Herry('MY_CODE', 'My message', {
 console.log(err instanceof Error) // true
 console.log(err instanceof Herry) // true
 
-console.log(err)          // Error [MY_CODE]: My message
+console.log(err)
+// Error [MY_CODE]: My message
+//     at Object.<anonymous> (script.js:3:13)
+
 console.log(err.code)     // MY_CODE
 console.log(err.message)  // My message
 console.log(err.info)     // { my: 'very', ... }
+```
+
+JSON serialization is also supported.
+
+```javascript
+const Herry = require('herry')
+
+const err = new Herry('MY_CODE', 'My message')
+
+console.log(JSON.stringify(err))
+// { code: 'MY_CODE', message: 'My message' }
 ```
 
 ## Define custom errors
