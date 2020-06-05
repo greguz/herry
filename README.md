@@ -1,5 +1,8 @@
 # You're a problem, Herry.
 
+[![npm version](https://badge.fury.io/js/herry.svg)](https://badge.fury.io/js/herry)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 Sometimes something went wrong, and you have to communicate **what** went wrong. Herry is a tiny library that exposes a slightly extended error class with a `code` property.
 
 The first constructor argument is the error code, the second argument is the error message, and the last argument is additional information. All arguments are optional.
