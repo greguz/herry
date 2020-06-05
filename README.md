@@ -14,10 +14,11 @@ const err = new Herry('MY_CODE', 'My message', {
 
 console.log(err instanceof Error) // true
 console.log(err instanceof Herry) // true
-console.log(err)                  // Error [MY_CODE]: My message
-console.log(err.code)             // MY_CODE
-console.log(err.message)          // My message
-console.log(err.info)             // { my: 'very', ... }
+
+console.log(err)          // Error [MY_CODE]: My message
+console.log(err.code)     // MY_CODE
+console.log(err.message)  // My message
+console.log(err.info)     // { my: 'very', ... }
 ```
 
 ## Define custom errors
@@ -37,6 +38,10 @@ const err = new UnauthorizedError({ resource: 'orders' })
 console.log(err instanceof Error)             // true
 console.log(err instanceof Herry)             // true
 console.log(err instanceof UnauthorizedError) // true
+
+console.log(err.code)     // HTTP_UNAUTHORIZED
+console.log(err.message)  // Authentication is...
+console.log(err.info)     // { resource: 'orders' }
 ```
 
 ## Change default error code
