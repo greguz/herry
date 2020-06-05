@@ -11,7 +11,8 @@
   "scripts": {
     "test:eslint": "eslint *.js",
     "test:ava": "ava",
-    "test": "npm run test:eslint && npm run test:ava"
+    "test": "npm run test:eslint && npm run test:ava",
+    "prepublishOnly": "npm run test"
   },
   "keywords": [
     "error",
