@@ -35,4 +35,12 @@ module.exports = class Herry extends Error {
     noEnum(this, 'code', code)
     noEnum(this, 'info', info)
   }
+
+  toJSON () {
+    return {
+      code: this.code,
+      message: this.message,
+      info: this.info
+    }
+  }
 }

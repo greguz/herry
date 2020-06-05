@@ -31,6 +31,18 @@ test('define', t => {
   t.deepEqual(err.info, { super: 'mario' })
 })
 
+test('toJSON', t => {
+  const err = new Herry('HERRY_TEST', 'Oh No', { big: 'explosion' })
+  const obj = JSON.parse(JSON.stringify(err))
+  t.deepEqual(obj, {
+    code: 'HERRY_TEST',
+    message: 'Oh No',
+    info: {
+      big: 'explosion'
+    }
+  })
+})
+
 test('defaultCode', t => {
   Herry.defaultCode = 'NOPE'
   const err = new Herry()
